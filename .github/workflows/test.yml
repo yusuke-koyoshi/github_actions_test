@@ -1,0 +1,15 @@
+name: test 
+
+on:
+  push:
+    branchedds: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: show github event
+        run: cat $GITHUB_EVENT_PATH
+
